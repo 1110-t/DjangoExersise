@@ -2,21 +2,18 @@
 <link rel="stylesheet" href="{% static 'blog.css' %}">
 <div class="wrapper">
     <div class="content">
-        <h1>User</h1>
-        <div>
-            <h2>{{ user.name }}</h2>
-            <p>{{ user.birthday }}</p>
-            <p>{{ user.get_gender_display }}</p>
-            <p>{{ user.get_bloodtype_display }}</p>
-            <p>{{ user.profile }}</p>
-        </div>
-        <a href="{% url 'users' %}">ユーザー一覧画面へ</a>
+        <h1>Blogs</h1>
+        <a href="/new">新規登録</a>
         <section class="content__section">
         {% for article in articles %}
             <article class="content__section__article">
                 <a href="{% url 'blog' pk=article.pk %}"><h2>{{ article.title }}</h2></a>
                 <p>{{ article.author }}</p>
                 <a href="{% url 'edit' pk=article.pk %}">編集</a>
+                <form method="POST" action="{% url 'delete' article.id %}">
+                    {% csrf_token %}
+                    <button type="submit">削除</button>
+                </form>
             </article>
         {% endfor %}
         </section>

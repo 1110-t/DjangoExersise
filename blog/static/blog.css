@@ -1,0 +1,19 @@
+.wrapper{
+    display:flex;
+    justify-content:center;
+}
+
+.content{
+    width:1500px;
+    max-width:80%;
+}
+
+.content__section{
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.content__section__article{
+    width:300px;
+    max-width:33%;
+}

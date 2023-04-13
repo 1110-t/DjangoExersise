@@ -1,0 +1,14 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'blog.css' %}">
+<div class="wrapper">
+    <div class="content">
+        <h1>Blog</h1>
+        <div>
+            <h2>{{ article.title }}</h2>
+            <a href="{% url 'user' pk=user.pk %}">
+                <p>{{ article.author }}</p>
+            </a>
+            <p>{{ article.text }}</p>
+        </div>
+    </div>
+</div>
