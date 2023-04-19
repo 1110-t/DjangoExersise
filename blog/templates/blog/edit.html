@@ -1,7 +1,7 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'blog.css' %}">
 <div class="wrapper">
-    <div class="content">
+    <div class="min-content">
     <h1>New Blog</h1>
     作業を{{ crud }}してください
     <form method="POST" class="article-form">
@@ -9,7 +9,7 @@
         {{ form.non_field_errors }}
         {% for field in form %}
             {% if not field.is_hidden %}
-                <div class="mb-3">
+                <div class="form-group">
                     {{ field.label_tag }}
                     {{ field }}
                     {{ field.errors }}

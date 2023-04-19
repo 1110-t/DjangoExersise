@@ -31,9 +31,9 @@ class User(models.Model):
         return self.name
 
 class Article(models.Model):
-    title = models.CharField(max_length=200)
+    title = models.CharField(blank=False,null=False,max_length=200)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
-    text = models.TextField()
+    text = models.TextField(blank=False,null=False)
 
     def publish(self):
         self.save()

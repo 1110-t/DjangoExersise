@@ -5,7 +5,7 @@ from .forms import ArticleForm
 
 # Create your views here.
 def blogs(request):
-    articles = Article.objects.all(); # 記事をすべて取得する
+    articles = Article.objects.all()
     context = {"articles":articles}
     return render(request,'blog/index.html',context)
 def blog(request,pk):

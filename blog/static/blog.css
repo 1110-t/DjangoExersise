@@ -8,6 +8,11 @@
     max-width:80%;
 }
 
+.min-content{
+    width:500px;
+    max-width:80%;
+}
+
 .content__section{
     display:flex;
     flex-wrap:wrap;
@@ -16,4 +21,17 @@
 .content__section__article{
     width:300px;
     max-width:33%;
+}
+
+.form-group{
+    margin-bottom:10px;
+}
+
+label{
+    width:100%;
+    display:block;
+}
+
+select{
+    width:100px;
 }

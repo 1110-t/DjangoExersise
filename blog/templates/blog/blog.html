@@ -1,14 +1,15 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'blog.css' %}">
 <div class="wrapper">
-    <div class="content">
+    <div class="min-content">
         <h1>Blog</h1>
         <div>
             <h2>{{ article.title }}</h2>
-            <a href="{% url 'user' pk=user.pk %}">
+            <a href="{% url 'user' pk=article.author.id %}">
                 <p>{{ article.author }}</p>
             </a>
             <p>{{ article.text }}</p>
         </div>
+        <a href='/'>戻る</a>
     </div>
 </div>
