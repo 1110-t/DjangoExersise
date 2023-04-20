@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'ex1.apps.Ex1Config',
     'blog.apps.BlogConfig'
 ]
 

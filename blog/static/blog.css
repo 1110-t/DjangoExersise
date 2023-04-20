@@ -3,6 +3,10 @@
     justify-content:center;
 }
 
+body{
+    background-color: #f3f4f6;
+}
+
 .content{
     width:1500px;
     max-width:80%;
@@ -21,6 +25,10 @@
 .content__section__article{
     width:300px;
     max-width:33%;
+    background-color: white;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
 }
 
 .form-group{
@@ -35,3 +43,4 @@ label{
 select{
     width:100px;
 }
+
